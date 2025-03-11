@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+
+<!-- Tweet Button with X Icon Image -->
+<a
+  href="https://twitter.com/intent/tweet?text={{ page.title }} #JICUG"
+  class="twitter-share-button"
+  data-size="large"
+>
+</a>
+<script
+  async
+  src="https://platform.twitter.com/widgets.js"
+  charset="utf-8"
+></script>
+
+<p>
+  {{ page.date | date_to_string }} {% assign author = site.authors | where:
+  'short_name', page.author | first %} {% if author %} -
+  <a href="{{ author.url }}">{{ author.name }}</a>
+  {% endif %}
+</p>
+
+{{ content }}
