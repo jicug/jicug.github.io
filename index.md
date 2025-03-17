@@ -4,7 +4,12 @@ layout: default
 ---
 
 # JICUG; Japan IBM Cloud User Group
+
 JICUGとは、IBM Cloud サービスを利用するユーザー同士のコミュニティです。
+
+## Discord
+
+- [Discord 招待ページ](https://discord.gg/rmEDXgYYbR)
 
 ## 過去の開催履歴
 
