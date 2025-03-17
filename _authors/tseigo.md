@@ -6,8 +6,9 @@ name: Seigo TANAKA
 position: Writer
 my_url: https://1ft-seabass.jp/
 x_id: 1ft_seabass
-image_url: https://i.gyazo.com/5b10a5ba16a9edb2c642777573a9b6b6.jpg
 ---
+
+<img src="https://i.gyazo.com/5b10a5ba16a9edb2c642777573a9b6b6.jpg" width="512">
 
 田中正吾は運営メンバーのひとりです。よろしくお願いします！
 
