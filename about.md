@@ -13,7 +13,7 @@ SLUG
 
 - [@1kano](/authors/1kano)
 - sakaigawa
-- Seigo Tanaka
+- [Seigo Tanaka](/authors/tseigo)
 
 ## 問い合わせ
 
