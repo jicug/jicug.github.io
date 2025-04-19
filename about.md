@@ -9,17 +9,17 @@ title: About US
 BMXUG
 SLUG
 
-## JDDUG の運営メンバー
+## JICUG の運営メンバー
 
 - [@1kano](/authors/1kano)
-- sakaigawa
+- [Shoichiro Sakaigawa](/authors/phssakaigawa)
 - [Seigo Tanaka](/authors/tseigo)
 
 ## 問い合わせ
 
 - Loading
 
-## JDDUG ロゴ
+## JICUG ロゴ
 
 - [Logo 80x80 px](/assets/images/jicug_logo_top.png){:target="_blank"}
 - [Logo 300x300 px](/assets/images/iconJICUG300.png){:target="_blank"}
