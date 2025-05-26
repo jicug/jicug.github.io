@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T22:10:19+09:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）</title><link href="http://localhost:4000/2025/05/13/" rel="alternate" type="text/html" title="ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）" /><published>2025-05-13T00:00:00+09:00</published><updated>2025-05-13T00:00:00+09:00</updated><id>http://localhost:4000/2025/05/jicug3</id><content type="html" xml:base="http://localhost:4000/2025/05/13/"><![CDATA[<p>開催日: 2025年5月13日</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-27T00:23:31+09:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）</title><link href="http://localhost:4000/2025/05/13/" rel="alternate" type="text/html" title="ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）" /><published>2025-05-13T00:00:00+09:00</published><updated>2025-05-13T00:00:00+09:00</updated><id>http://localhost:4000/2025/05/jicug3</id><content type="html" xml:base="http://localhost:4000/2025/05/13/"><![CDATA[<p>開催日: 2025年5月13日</p>
 
 <h1 id="ライブデプロイで学ぶibm-cloud入門vpcとdatabaseサービス">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）</h1>
 
@@ -13,8 +13,23 @@
 <h3 id="ドライバーがibm-cloudポータルやos操作をしてナビゲーターが伴走して調査や執筆をしますという役割分担でイベント進行">ドライバーがIBM CloudポータルやOS操作をして、ナビゲーターが伴走して調査や執筆をします。という役割分担でイベント進行。</h3>
 <p><img src="/assets/images/jicug3/01_driving.jpg" alt="driver and navigator" /></p>
 
-<h3 id="本日のゴールを確認します">本日のゴールを確認します</h3>
-<p><img src="/assets/images/jicug3/02_goal.png" alt="goal" /></p>
+<h2 id="本日のゴールを確認します">本日のゴールを確認します</h2>
+
+<ul>
+  <li>過去のライブデプロイ
+    <ul>
+      <li>#1：VPCサーバーをデプロイ、WEBサーバー立ち上げ</li>
+      <li>#2：VPC可用性編（LB, WEBx2個に負荷分散）</li>
+    </ul>
+  </li>
+  <li>今回：WEB＋マネージドDB
+    <ul>
+      <li>Step１．VPCでのマネージドDBのアーキテクチャを確認する</li>
+      <li>Step２．仮想サーバーとDBをデプロイする</li>
+    </ul>
+  </li>
+  <li>皆さまのゴール目標：マネージドDBのデプロイ体験を目撃する</li>
+</ul>
 
 <h3 id="教科書の柔らか層本を読んでibm-databaseサービスを学びます">教科書の「柔らか層本」を読んで、IBM Databaseサービスを学びます</h3>
 <p><img src="/assets/images/jicug3/03_refference.jpg" alt="ssh connect by vscode" /></p>
@@ -35,21 +50,33 @@
 <p><img src="/assets/images/jicug3/08_deploying.jpg" alt="deploying database service" /></p>
 
 <h3 id="databaseサービスにサーバーから繋ぐ">Databaseサービスにサーバーから繋ぐ！</h3>
-<p>クイックスタート文書がある。手順通り実施すればサーバーからMySQLデータベースに繋がるはず。
-あれ？ MySQLコマンドでは繋がらない？　パスワードだけじゃだめ？
-そういえばDatabaseユーザー名は何だ？ admin とのこと。
-adminのパスワードは？　ポータルでセルフ登録するとのこと。
-Databaseに接続するにはSSL認証も必要か。パスワードとSSL認証のセキュアな接続。つまづきまくり。
-<img src="/assets/images/jicug3/09_setting.jpg" alt="to connect database" />
-接続がんばる
-<img src="/assets/images/jicug3/10_mysql.jpg" alt="mysql setup" />
-前準備はもう少し説明あると親切なんだけどなー、情報一元化を望む
+
+<p>クイックスタート文書がある。手順通り実施すればサーバーからMySQLデータベースに繋がるはず。</p>
+
+<p>あれ？ MySQLコマンドでは繋がらない？　パスワードだけじゃだめ？</p>
+
+<p>そういえばDatabaseユーザー名は何だ？ admin とのこと。</p>
+
+<p>adminのパスワードは？　ポータルでセルフ登録するとのこと。</p>
+
+<p>Databaseに接続するにはSSL認証も必要か。パスワードとSSL認証のセキュアな接続。つまづきまくり。</p>
+
+<p><img src="/assets/images/jicug3/09_setting.jpg" alt="to connect database" /></p>
+
+<p>接続がんばる
+<img src="/assets/images/jicug3/10_mysql.jpg" alt="mysql setup" /></p>
+
+<p>前準備はもう少し説明あると親切なんだけどなー、情報一元化を望む
 <img src="/assets/images/jicug3/11_connection.jpg" alt="connection" /></p>
 
 <h3 id="mysqlデータベースマネージドサービスに２台のサーバーから接続したプライベート経由とパブリック経由">MySQLデータベース・マネージドサービスに２台のサーバーから接続した。プライベート経由とパブリック経由。</h3>
 <p><img src="/assets/images/jicug3/12_finnaly.jpg" alt="todays structure" /></p>
 
-<p>いろいろつまづきポイントを体験できたので次からスムーズにデプロイできるかな、大丈夫かな。もう一回やってみるか、あるいはNoSQLを試すか。次回までに検討する。</p>]]></content><author><name>1Kano</name></author><summary type="html"><![CDATA[開催日: 2025年5月13日]]></summary></entry><entry><title type="html">ライブデプロイで学ぶIBM Cloud入門（VPC/可用性編）</title><link href="http://localhost:4000/2025/04/15/" rel="alternate" type="text/html" title="ライブデプロイで学ぶIBM Cloud入門（VPC/可用性編）" /><published>2025-04-15T00:00:00+09:00</published><updated>2025-04-15T00:00:00+09:00</updated><id>http://localhost:4000/2025/04/jicug2</id><content type="html" xml:base="http://localhost:4000/2025/04/15/"><![CDATA[<p>開催日: 2025年4月15日</p>
+<p>いろいろつまづきポイントを体験できたので次からスムーズにデプロイできるかな、大丈夫かな。もう一回やってみるか、あるいはNoSQLを試すか。次回までに検討する。</p>
+
+<h2 id="もっと詳しい実況は-まとめサイト-を参照ください">もっと詳しい実況は まとめサイト を参照ください</h2>
+
+<p><a href="https://posfie.com/@1ft_seabass/p/KUjgXlb">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）</a></p>]]></content><author><name>1Kano</name></author><summary type="html"><![CDATA[開催日: 2025年5月13日]]></summary></entry><entry><title type="html">ライブデプロイで学ぶIBM Cloud入門（VPC/可用性編）</title><link href="http://localhost:4000/2025/04/15/" rel="alternate" type="text/html" title="ライブデプロイで学ぶIBM Cloud入門（VPC/可用性編）" /><published>2025-04-15T00:00:00+09:00</published><updated>2025-04-15T00:00:00+09:00</updated><id>http://localhost:4000/2025/04/jicug2</id><content type="html" xml:base="http://localhost:4000/2025/04/15/"><![CDATA[<p>開催日: 2025年4月15日</p>
 
 <h1 id="ライブデプロイで学ぶibm-cloud入門vpc可用性編">ライブデプロイで学ぶIBM Cloud入門（VPC/可用性編）</h1>
 
@@ -69,8 +96,19 @@ Databaseに接続するにはSSL認証も必要か。パスワードとSSL認証
 <h3 id="vscodeを立ち上げてssh接続しています">VScodeを立ち上げて、SSH接続しています</h3>
 <p><img src="/assets/images/jicug2/03_vscode.jpg" alt="ssh connect by vscode" /></p>
 
-<h3 id="今日のゴール確認">今日のゴール確認</h3>
-<p><img src="/assets/images/jicug2/04_goal.jpg" alt="todays goal" /></p>
+<h2 id="今日のゴール確認">今日のゴール確認</h2>
+
+<ul>
+  <li>前回： VPCサーバーをデプロイ、WEBサーバー立ち上げ</li>
+  <li>今回クラウド学習：　VPC可用性編</li>
+  <li>ロードバランサーで２つのWEBに負荷分散する構成をつくるとか、ベアメタルとかPowerサーバーとか？
+    <ul>
+      <li>Step１．VPCネットワークのアーキテクチャを確認する</li>
+      <li>Step２．仮想サーバーをデプロイする</li>
+    </ul>
+  </li>
+  <li>皆さまのゴール目標：サーバーのデプロイ体験を目撃する</li>
+</ul>
 
 <h3 id="先ほどデプロイしたサーバーのapacheサーバーを設定しています">先ほどデプロイしたサーバーのApacheサーバーを設定しています</h3>
 <p><img src="/assets/images/jicug2/04_setting.png" alt="setting apache" /></p>
@@ -91,7 +129,11 @@ Databaseに接続するにはSSL認証も必要か。パスワードとSSL認証
 <p><img src="/assets/images/jicug2/09_lb.png" alt="check the LB" /></p>
 
 <h3 id="冗長化したサーバー２台のうち１台を停止してwebサイトが切り替わるかテストしています">冗長化したサーバー２台のうち、１台を停止してWEBサイトが切り替わるかテストしています</h3>
-<p><img src="/assets/images/jicug2/10_lbtest.jpg" alt="test the LB" /></p>]]></content><author><name>1Kano</name></author><summary type="html"><![CDATA[開催日: 2025年4月15日]]></summary></entry><entry><title type="html">IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）</title><link href="http://localhost:4000/2025/03/11/" rel="alternate" type="text/html" title="IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）" /><published>2025-03-11T00:00:00+09:00</published><updated>2025-03-11T00:00:00+09:00</updated><id>http://localhost:4000/2025/03/jicug1</id><content type="html" xml:base="http://localhost:4000/2025/03/11/"><![CDATA[<p>開催日: 2025年3月11日</p>
+<p><img src="/assets/images/jicug2/10_lbtest.jpg" alt="test the LB" /></p>
+
+<h2 id="もっと詳しい実況は-まとめサイト-を参照ください">もっと詳しい実況は まとめサイト を参照ください</h2>
+
+<p><a href="https://posfie.com/@1ft_seabass/p/wdsN2Hg">ライブデプロイで学ぶIBM Cloud入門（VPC/可用性編）</a></p>]]></content><author><name>1Kano</name></author><summary type="html"><![CDATA[開催日: 2025年4月15日]]></summary></entry><entry><title type="html">IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）</title><link href="http://localhost:4000/2025/03/11/" rel="alternate" type="text/html" title="IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）" /><published>2025-03-11T00:00:00+09:00</published><updated>2025-03-11T00:00:00+09:00</updated><id>http://localhost:4000/2025/03/jicug1</id><content type="html" xml:base="http://localhost:4000/2025/03/11/"><![CDATA[<p>開催日: 2025年3月11日</p>
 
 <h1 id="ibm-cloud-ユーザー会リブート-ライブデプロイで学ぶibm-cloud入門vpc編">IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）</h1>
 
@@ -101,11 +143,28 @@ Databaseに接続するにはSSL認証も必要か。パスワードとSSL認証
 
 <p><img src="/assets/images/jicug1/00_title.jpg" alt="JICUG title" /></p>
 
-<h3 id="jicugとは">JICUGとは</h3>
-<p><img src="/assets/images/jicug1/01_description.jpg" alt="about JICUG" /></p>
+<h2 id="jicugとは">JICUGとは</h2>
 
-<h3 id="今日のゴール設定">今日のゴール設定</h3>
-<p><img src="/assets/images/jicug1/02_goal.jpg" alt="today's goal" /></p>
+<ul>
+  <li>日本で IBM Cloud を活用しているユーザーが運営する、IBM Cloud ユーザーのためのコミュニティ</li>
+  <li>を再立ち上げしようという企画。なのでユーザー会リブート</li>
+  <li>契約プランや活用方法は問わず, IBM Cloudに興味がある, 業務で使っている, 参加は誰でもOK</li>
+  <li>ユーザー同士で技術情報をシェアしたり、横のつながりを広げたりして IBM Cloud を盛り上げていくコミュニティ。</li>
+  <li>Connpassグループに参加したらJICUGメンバーと発信可。</li>
+</ul>
+
+<h2 id="今日のゴール設定">今日のゴール設定</h2>
+
+<ul>
+  <li>クラウド学習：　最初の仮想サーバー１台
+    <ul>
+      <li>Step１．VPC と サブネット などネットワーク環境を準備する</li>
+      <li>Step２．最初の仮想サーバーをデプロイする</li>
+    </ul>
+  </li>
+  <li>ゴール目標：VPCとサーバーのデプロイ体験を目撃する</li>
+  <li>たぶん次回：　ロードバランサーで２つのWEBに負荷分散する構成をつくるとか、ベアメタルとかPowerサーバーとか？</li>
+</ul>
 
 <h3 id="vpcサーバーの前にクラシックサーバーとは">VPCサーバーの前に、クラシックサーバーとは</h3>
 <p><img src="/assets/images/jicug1/03_classic.jpg" alt="about classic server" /></p>
@@ -135,4 +194,8 @@ Databaseに接続するにはSSL認証も必要か。パスワードとSSL認証
 <p><img src="/assets/images/jicug1/11_test.jpg" alt="test the web server" /></p>
 
 <h3 id="本日をkptで振り返り">本日をKPTで振り返り</h3>
-<p><img src="/assets/images/jicug1/12_kpt.png" alt="wrap up" /></p>]]></content><author><name>1Kano</name></author><summary type="html"><![CDATA[開催日: 2025年3月11日]]></summary></entry></feed>
+<p><img src="/assets/images/jicug1/12_kpt.png" alt="wrap up" /></p>
+
+<h2 id="もっと詳しい実況は-まとめサイト-を参照ください">もっと詳しい実況は まとめサイト を参照ください</h2>
+
+<p><a href="https://posfie.com/@1ft_seabass/p/52x9ayl">IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）</a></p>]]></content><author><name>1Kano</name></author><summary type="html"><![CDATA[開催日: 2025年3月11日]]></summary></entry></feed>
