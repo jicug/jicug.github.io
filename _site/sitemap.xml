@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>/authors/1kano/</loc>
+<lastmod>2025-05-26T20:54:54+09:00</lastmod>
+</url>
+<url>
+<loc>/authors/phssakaigawa/</loc>
+<lastmod>2025-05-26T20:54:54+09:00</lastmod>
+</url>
+<url>
+<loc>/authors/tseigo/</loc>
+<lastmod>2025-05-26T20:54:54+09:00</lastmod>
+</url>
+<url>
+<loc>/2025/03/11/</loc>
+<lastmod>2025-03-11T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>/about/</loc>
+</url>
+<url>
+<loc>/blog/</loc>
+</url>
+<url>
+<loc>/heros/</loc>
+</url>
+<url>
+<loc>/</loc>
 </url>
 </urlset>

@@ -1,1 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-03-11T23:16:00+09:00</updated><id>http://localhost:4000/feed.xml</id></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-05-26T20:54:54+09:00</updated><id>/feed.xml</id><entry><title type="html">IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）</title><link href="/2025/03/11/" rel="alternate" type="text/html" title="IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）" /><published>2025-03-11T00:00:00+09:00</published><updated>2025-03-11T00:00:00+09:00</updated><id>/2025/03/jicug1</id><content type="html" xml:base="/2025/03/11/"><![CDATA[<p>開催日: 2025年3月11日</p>
+
+<h1 id="ibm-cloud-ユーザー会リブート-ライブデプロイで学ぶibm-cloud入門vpc編">IBM Cloud ユーザー会リブート！ ライブデプロイで学ぶIBM Cloud入門（VPC編）</h1>
+
+<p>2025年初めての IBM Cloud ユーザー会はじまります。
+<a href="/assets/images/jicug1/00_title.jpg">JICUG</a></p>]]></content><author><name>1Kano</name></author><summary type="html"><![CDATA[開催日: 2025年3月11日]]></summary></entry></feed>
