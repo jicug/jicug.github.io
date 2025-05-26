@@ -15,9 +15,11 @@ SLUG
 - [Shoichiro Sakaigawa](/authors/phssakaigawa)
 - [Seigo Tanaka](/authors/tseigo)
 
+![driver and navigator](/assets/images/jicug3/01_driving.jpg)
+
 ## 問い合わせ
 
-- Loading
+- [Google フォーム で投稿してください](https://docs.google.com/forms/d/e/1FAIpQLSesq-dW09rBKOH2U3-DxxfwBrkKEGtDTR2BHr6iEQUcLPKylQ/viewform?usp=sharing&ouid=102637048702765415060)
 
 ## JICUG ロゴ
 
