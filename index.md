@@ -22,3 +22,5 @@ _JICUG#3 の時に撮影した集合写真_
 - [2025/03/11 Japan IBM Cloud User Group Meetup #1](https://bmxug.connpass.com/event/345020/)
 
 ## 問合せ
+
+- [Google フォーム で投稿してください](https://docs.google.com/forms/d/e/1FAIpQLSesq-dW09rBKOH2U3-DxxfwBrkKEGtDTR2BHr6iEQUcLPKylQ/viewform?usp=sharing&ouid=102637048702765415060)
