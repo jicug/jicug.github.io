@@ -98,8 +98,23 @@
 <h3 id="ドライバーがibm-cloudポータルやos操作をしてナビゲーターが伴走して調査や執筆をしますという役割分担でイベント進行">ドライバーがIBM CloudポータルやOS操作をして、ナビゲーターが伴走して調査や執筆をします。という役割分担でイベント進行。</h3>
 <p><img src="/assets/images/jicug3/01_driving.jpg" alt="driver and navigator" /></p>
 
-<h3 id="本日のゴールを確認します">本日のゴールを確認します</h3>
-<p><img src="/assets/images/jicug3/02_goal.png" alt="goal" /></p>
+<h2 id="本日のゴールを確認します">本日のゴールを確認します</h2>
+
+<ul>
+  <li>過去のライブデプロイ
+    <ul>
+      <li>#1：VPCサーバーをデプロイ、WEBサーバー立ち上げ</li>
+      <li>#2：VPC可用性編（LB, WEBx2個に負荷分散）</li>
+    </ul>
+  </li>
+  <li>今回：WEB＋マネージドDB
+    <ul>
+      <li>Step１．VPCでのマネージドDBのアーキテクチャを確認する</li>
+      <li>Step２．仮想サーバーとDBをデプロイする</li>
+    </ul>
+  </li>
+  <li>皆さまのゴール目標：マネージドDBのデプロイ体験を目撃する</li>
+</ul>
 
 <h3 id="教科書の柔らか層本を読んでibm-databaseサービスを学びます">教科書の「柔らか層本」を読んで、IBM Databaseサービスを学びます</h3>
 <p><img src="/assets/images/jicug3/03_refference.jpg" alt="ssh connect by vscode" /></p>
@@ -120,21 +135,33 @@
 <p><img src="/assets/images/jicug3/08_deploying.jpg" alt="deploying database service" /></p>
 
 <h3 id="databaseサービスにサーバーから繋ぐ">Databaseサービスにサーバーから繋ぐ！</h3>
-<p>クイックスタート文書がある。手順通り実施すればサーバーからMySQLデータベースに繋がるはず。
-あれ？ MySQLコマンドでは繋がらない？　パスワードだけじゃだめ？
-そういえばDatabaseユーザー名は何だ？ admin とのこと。
-adminのパスワードは？　ポータルでセルフ登録するとのこと。
-Databaseに接続するにはSSL認証も必要か。パスワードとSSL認証のセキュアな接続。つまづきまくり。
-<img src="/assets/images/jicug3/09_setting.jpg" alt="to connect database" />
-接続がんばる
-<img src="/assets/images/jicug3/10_mysql.jpg" alt="mysql setup" />
-前準備はもう少し説明あると親切なんだけどなー、情報一元化を望む
+
+<p>クイックスタート文書がある。手順通り実施すればサーバーからMySQLデータベースに繋がるはず。</p>
+
+<p>あれ？ MySQLコマンドでは繋がらない？　パスワードだけじゃだめ？</p>
+
+<p>そういえばDatabaseユーザー名は何だ？ admin とのこと。</p>
+
+<p>adminのパスワードは？　ポータルでセルフ登録するとのこと。</p>
+
+<p>Databaseに接続するにはSSL認証も必要か。パスワードとSSL認証のセキュアな接続。つまづきまくり。</p>
+
+<p><img src="/assets/images/jicug3/09_setting.jpg" alt="to connect database" /></p>
+
+<p>接続がんばる
+<img src="/assets/images/jicug3/10_mysql.jpg" alt="mysql setup" /></p>
+
+<p>前準備はもう少し説明あると親切なんだけどなー、情報一元化を望む
 <img src="/assets/images/jicug3/11_connection.jpg" alt="connection" /></p>
 
 <h3 id="mysqlデータベースマネージドサービスに２台のサーバーから接続したプライベート経由とパブリック経由">MySQLデータベース・マネージドサービスに２台のサーバーから接続した。プライベート経由とパブリック経由。</h3>
 <p><img src="/assets/images/jicug3/12_finnaly.jpg" alt="todays structure" /></p>
 
 <p>いろいろつまづきポイントを体験できたので次からスムーズにデプロイできるかな、大丈夫かな。もう一回やってみるか、あるいはNoSQLを試すか。次回までに検討する。</p>
+
+<h2 id="もっと詳しい実況は-まとめサイト-を参照ください">もっと詳しい実況は まとめサイト を参照ください</h2>
+
+<p><a href="https://posfie.com/@1ft_seabass/p/KUjgXlb">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）</a></p>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="/assets/js/common.js"></script>
