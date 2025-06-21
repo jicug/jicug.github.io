@@ -10,7 +10,11 @@ JICUGとは、IBM Cloud サービスを利用するユーザー同士のコミ�
 ![集合写真](/assets/images/top_jumbo.png)
 _JICUG#3 の時に撮影した集合写真_
 
-## Discord
+## 次回の開催予定
+
+- [2025/07/15 Japan IBM Cloud User Group Meetup #5（VPC運用監視）](https://bmxug.connpass.com/event/359517/)
+
+## 運営に参加したい人はこちら（Discord）
 
 - [Discord 招待ページ](https://discord.gg/rmEDXgYYbR)
 

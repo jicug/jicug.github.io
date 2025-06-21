@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-27T00:23:31+09:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）</title><link href="http://localhost:4000/2025/05/13/" rel="alternate" type="text/html" title="ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）" /><published>2025-05-13T00:00:00+09:00</published><updated>2025-05-13T00:00:00+09:00</updated><id>http://localhost:4000/2025/05/jicug3</id><content type="html" xml:base="http://localhost:4000/2025/05/13/"><![CDATA[<p>開催日: 2025年5月13日</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-21T11:52:12+09:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス つづき）</title><link href="http://localhost:4000/2025/06/16/" rel="alternate" type="text/html" title="ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス つづき）" /><published>2025-06-16T00:00:00+09:00</published><updated>2025-06-16T00:00:00+09:00</updated><id>http://localhost:4000/2025/06/jicug4.0.1</id><content type="html" xml:base="http://localhost:4000/2025/06/16/"><![CDATA[<p>開催日: 2025年6月16日
+AI 議事録速報 を基に更新 6/21</p>
+
+<p><img src="/assets/images/jicug4/01top.png" alt="本日のテーマはマネージドDB編のつづき" /></p>
+
+<h2 id="議論のポイント">議論のポイント</h2>
+
+<h3 id="会議の概要">会議の概要</h3>
+
+<ul>
+  <li>WEB - App - DB の三層構成が構築テーマ
+    <ol>
+      <li>WEB(Nginx)</li>
+      <li>App(Node.js)</li>
+      <li>DB(MySQL)</li>
+    </ol>
+  </li>
+  <li>VPCサーバーとマネージドデータベースのライブデプロイ(構築)を実行</li>
+  <li>前回のつまずきポイントを復習しながら進行</li>
+</ul>
+
+<p><img src="/assets/images/jicug4/02design.png" alt="三層構成のAPIアプリをつくる" /></p>
+
+<h3 id="vpcサーバーのデプロイ">VPCサーバーのデプロイ</h3>
+
+<ul>
+  <li>Redhat9 のイメージを使用してVPCサーバーをデプロイ(約2分)</li>
+  <li>フローティングIPを設定してインターネット接続を確立</li>
+  <li>SSH接続でサーバーにアクセス成功</li>
+  <li>セキュリティグループで3000番ポートを開放し Nodeアプリ を公開</li>
+  <li>ついでにセキュリティグループで1880番ポートも解放して Node-RED も立ち上げ</li>
+</ul>
+
+<p><img src="/assets/images/jicug4/03server.png" alt="VPCサーバーをデプロイ中" /></p>
+
+<h3 id="データベース構築">データベース構築</h3>
+
+<ul>
+  <li>MySQLマネージドサービスをデプロイ</li>
+  <li>プライベートエンドポイントを設定</li>
+  <li>adminユーザーのパスワードをIBM Cloudポータルで設定</li>
+  <li>前回はSSL証明書の課題/疑問があったが、パスワード認証だけでリモートのMySQLに接続成功</li>
+</ul>
+
+<p><img src="/assets/images/jicug4/04db.png" alt="マネージドDBをデプロイ中" /></p>
+
+<ul>
+  <li>仕事帰りの境川さんは自宅に向かって高速を運転中。ホントにドライバー^^。ちょうどいいタイミングでJoin！</li>
+</ul>
+
+<p><img src="/assets/images/jicug4/07join.jpg" alt="仕事帰りの境川さんがZoomにJoin" /></p>
+
+<h3 id="アプリケーション開発">アプリケーション開発</h3>
+
+<ul>
+  <li>Node.jsとExpressをサーバーにインストール</li>
+  <li>MySQLクライアントの設定に苦戦。MySQL2をインストールし成功</li>
+  <li>データベース接続APIの実装</li>
+  <li>CRUD操作（作成・読み取り・削除）の動作確認</li>
+  <li>Node-REDの紹介と今後の活用可能性</li>
+</ul>
+
+<p><img src="/assets/images/jicug4/05mysql.png" alt="mySQLをセットアップ中" /></p>
+
+<p><img src="/assets/images/jicug4/06api.png" alt="APIアプリをデプロイし動作を検証中" /></p>
+
+<h3 id="技術的な学び">技術的な学び</h3>
+
+<ul>
+  <li>IBMクラウドCLIの使用方法</li>
+  <li>dnf パッケージマネージャーの操作</li>
+  <li>フォアグランドのプロセスをCtrl+[C]で停止せずに、入力する方法（Ctrl+[Z]、bg、fg）を知る</li>
+  <li>データベース認証方式のエラーに苦戦。MySQLモジュールはMySQL2を使うことで解決</li>
+</ul>
+
+<p><img src="/assets/images/jicug4/07app.png" alt="完成したAPIアプリ" /></p>
+
+<h3 id="今後の展望">今後の展望</h3>
+
+<ul>
+  <li>VPCサーバーならオートスケールどうかな。最近はコンテナに置き換えか</li>
+  <li>Powerサーバー（AIX OS）やベアメタルサーバーも候補</li>
+  <li>VPCサーバー構築したので、構築の次は運用だ。次は監視・モニタリングの運用ツールがいい</li>
+</ul>
+
+<p><img src="/assets/images/jicug4/99presentedby.png" alt="本日のドライバーとナビゲーター" /></p>]]></content><author><name>tseigo</name></author><summary type="html"><![CDATA[開催日: 2025年6月16日 AI 議事録速報 を基に更新 6/21]]></summary></entry><entry><title type="html">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）</title><link href="http://localhost:4000/2025/05/13/" rel="alternate" type="text/html" title="ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）" /><published>2025-05-13T00:00:00+09:00</published><updated>2025-05-13T00:00:00+09:00</updated><id>http://localhost:4000/2025/05/jicug3</id><content type="html" xml:base="http://localhost:4000/2025/05/13/"><![CDATA[<p>開催日: 2025年5月13日</p>
 
 <h1 id="ライブデプロイで学ぶibm-cloud入門vpcとdatabaseサービス">ライブデプロイで学ぶIBM Cloud入門（VPCとDatabaseサービス）</h1>
 
