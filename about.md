@@ -11,9 +11,10 @@ SLUG
 
 ## JICUG の運営メンバー
 
-- [@1kano](/authors/1kano)
+- [Ichiro KANO](/authors/1kano)
 - [Shoichiro Sakaigawa](/authors/phssakaigawa)
 - [Seigo Tanaka](/authors/tseigo)
+- [Kohei Nishikawa](/authors/kolinz)
 
 ![driver and navigator](/assets/images/jicug3/01_driving.jpg)
 
