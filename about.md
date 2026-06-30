@@ -16,7 +16,7 @@ SLUG
 - [Seigo Tanaka](/authors/tseigo)
 - [Kohei Nishikawa](/authors/kolinz)
 
-![driver and navigator](/assets/images/jicug3/01_driving.jpg)
+![driver and navigator](/assets/images/jicug4/99presentedby.png)
 
 ## 問い合わせ
 
