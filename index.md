@@ -12,9 +12,10 @@ JICUGとは、IBM Cloud サービスを利用するユーザー同士のコミ�
 _JICUG#3 の時に撮影した集合写真_
 
 ## 次回開催
-- [2026/07/28 あなたのAI駆動開発パートナー IBM Bob を使ったアプリ開発 #3](準備中)
+- [2026/08/25 あなたのAI駆動開発パートナー IBM Bob を使ったアプリ開発 #4](https://bmxug.connpass.com/event/402047/)
 
 ## 過去の開催履歴 2026
+- [2026/07/28 あなたのAI駆動開発パートナー IBM Bob を使ったアプリ開発 #3](https://bmxug.connpass.com/event/399093/)
 - [2026/06/30 あなたのAI駆動開発パートナー IBM Bob を使ったアプリ開発 #2](https://bmxug.connpass.com/event/396189/)
 - [2026/05/25 あなたのAI駆動開発パートナー IBM Bob を使ったアプリ開発](https://bmxug.connpass.com/event/355597/)
 
